@@ -1,0 +1,162 @@
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 20px;
+}
+
+@media (min-width:100px) and (max-width:1200px) {
+	html {
+		font-size: 16px;
+	}
+
+}
+
+body {
+	font-family: "Microsoft Yahei";
+}
+
+a {
+	text-decoration: none;
+}
+
+.tac {
+	text-align: center;
+}
+
+#wraper {
+	height: 100%;
+	background-image: url(img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.entry-box {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.entry-box .item {
+	display: flex;
+	align-items: flex-end;
+	width: 20.0rem;
+	height: 20.8rem;
+	background-image: url(img/game_01.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.entry-box .item:nth-child(1) {
+	margin-right: 1.0rem;
+	background-image: url(img/game_01.png);
+}
+
+.entry-box .item:nth-child(2) {
+	background-image: url(img/game_02.png);
+}
+
+/*BTNS*/
+.btn {
+	color: #ffffff;
+	font-size: 38px;
+	font-weight: 400;
+	padding: 0 88px;
+	font-style: normal;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	border-radius: 44px;
+	display: inline-block;
+	transition: all 0.5s;
+	cursor: pointer;
+	box-shadow: inset 0px 1px 0px 0px #CF73B2;
+	background-image: linear-gradient(to bottom, #BA3791, #BB4986, #D78B90, #BB4986, #BA3791);
+	background-position: 0 0;
+	background-size: 100% 200%;
+}
+
+.btn-l {
+	padding: 0;
+	width: 378px;
+	height: 88px;
+	line-height: 88px;
+}
+
+.btn:hover {
+	background-position: 0 100%;
+}
+
+/*ICONS*/
+.icon {
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	padding-left: 50px;
+}
+
+.icon-del {
+	background-image: url(img/delete.png);
+}
+
+.icon-friends {
+	background-image: url(img/friends.png);
+}
+
+.view-choose {
+	display: flex;
+	flex-direction: column;
+	color: #FFF;
+}
+
+.person-box {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 38;
+}
+
+.person-box h1 {
+	margin: 0;
+	font-size: 3.0rem;
+	font-weight: 400;
+}
+
+.person-box img {
+	width: 11.0rem;
+	height: 11.0rem;
+	border: 6px solid #FFF;
+}
+
+.selected-box {
+	flex: 15;
+	display: flex;
+	font-size: 1.8rem;
+}
+
+.selected-box label {
+	color: #FFE430;
+	flex: 13;
+	text-align: center;
+}
+
+.selected-box .selected-result {
+	flex: 87;
+}
+
+.selected-box .item {
+	display: inline-block;
+	margin-left: 1em;
+}
+
+.view-choose .btn-box {
+	flex: 20;
+}
+
+.view-choose .btn-box img {
+	width: 11.6rem;
+	height: 3.2rem;
+}

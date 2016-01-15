@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>途风2016 - 游戏选人</title>
+	<link rel="stylesheet" href="lib/normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="wraper" class="view-choose">
+		<div class="person-box" id="person-box">
+			<div>
+				<img src="img/random.jpg" alt="">
+				<h1 class="person-name">
+					风武侠
+				</h1>
+			</div>
+		</div>
+
+		<div class="selected-box">
+			<label>已选</label>
+			<div class="selected-result">
+				
+				
+			</div>
+		</div>
+
+		<div class="tac btn-box">
+			<p>
+				<img src="img/ready.png" alt="ready go">
+			</p>
+			<a class="btn btn-l" id="btnChooseGame" data-obj-name="choose">开始</a>
+		</div>
+	</div>
+		
+	<!-- 本地储存 -->
+	<script src="lib/store.min.js"></script>
+	<!-- 参与人员信息 -->
+	<script src="data.js"></script>
+	<!-- 抽奖逻辑 -->
+	<script src="lottery.js"></script>
+</body>
+</html>
