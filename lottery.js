@@ -23,18 +23,16 @@ window.rsDef = {
 
 window.result = rsDef;
 
-var specialPrizeBtn = document.getElementById("specialPrizeBtn"),
-	firstPrizeBtn = document.getElementById("firstPrizeBtn"),
-	secondPrizeBtn = document.getElementById("secondPrizeBtn"),
-	thirdPrizeBtn = document.getElementById("thirdPrizeBtn");
 
-var btns = document.querySelectorAll(".btn");
-var elePerson = document.getElementById("person-box");
-var timer;
+var btns = document.querySelectorAll(".btn"),
+	elePerson = document.getElementById("person-box"),
+	timer;
 
 document.addEventListener("click", function(event) {
-	var target = event.target;
-	var whichPrize;
+	var target = event.target,
+		whichPrize,
+		targetWrap,
+		targetRsWrap;
 	if (!target.classList.contains("btn")) {
 		return false;
 	}
@@ -45,15 +43,20 @@ document.addEventListener("click", function(event) {
 		return false;
 	}
 
-	var targetWrap = document.getElementById(whichPrize);
-	var targetRsWrap = targetWrap.querySelector(".selected-result");
-	console.log(targetRsWrap);
-
-	console.log(whichPrize);
+	targetWrap = document.getElementById(whichPrize);
+	targetRsWrap = targetWrap.querySelector(".selected-result");
 
 	run(target, whichPrize, targetRsWrap);
 }, false);
 
+
+/**
+ * 主要的抽奖逻辑
+ * @param  {DOM} btn        按钮元素
+ * @param  {String} whichPrize 哪个奖
+ * @param  {DOM} toElement  抽奖结果存放的元素
+ * @return {[type]}            [description]
+ */
 function run(btn, whichPrize, toElement) {
 	var prizeObj = window.rsDef[whichPrize],
 		prizeArr = prizeObj.data,
