@@ -1,33 +1,3 @@
-window.rsDef = {
-	choose: {
-		timer: null,
-		data: [],
-		ran: undefined
-	},
-	specialPrize: {
-		timer: null,
-		data: [],
-		ran: undefined
-	},
-	firstPrize: {
-		timer: null,
-		data: [],
-		ran: undefined
-	},
-	secondPrize: {
-		timer: null,
-		data: [],
-		ran: undefined
-	},
-	thirdPrize: {
-		timer: null,
-		data: [],
-		ran: undefined
-	}
-};
-
-window.result = store.get("result") || rsDef;
-
 window.def = {
 	id: 0,
 	name: "XXX",
