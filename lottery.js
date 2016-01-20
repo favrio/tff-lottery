@@ -1,59 +1,31 @@
-function random(max) {
-	return Math.floor(Math.random() * (max + 1));
-}
+var specialPrizeBtn = document.getElementById("specialPrizeBtn"),
+	firstPrizeBtn = document.getElementById("firstPrizeBtn"),
+	secondPrizeBtn = document.getElementById("secondPrizeBtn"),
+	thirdPrizeBtn = document.getElementById("thirdPrizeBtn");
 
-function render(data) {
-	var tpl = '<div><img src="asset/' + data.img + '" alt=""><h1 class="person-name">' + data.name + '</h1></div>';
-	return tpl;
-}
+var btns = document.querySelectorAll(".btn");
 
-
-function renderLuckyArray(arr) {
-	var tpl = "";
-	for (var i = 0; i < arr.length; i++) {
-		tpl += '<span class="item">' + arr[i].name + '</span>';
+document.addEventListener("click", function(event) {
+	var target = event.target;
+	var whichPrize;
+	if (!target.classList.contains("btn")) {
+		return false;
 	}
-	return tpl;
-}
+
+	whichPrize = target.dataset && target.dataset.which;
+	if (!whichPrize) {
+		throw new Error("没有正确的奖项。");
+		return false;
+	}
+
+	var targetWrap = document.getElementById(whichPrize);
+	var targetRsWrap = targetWrap.querySelector(".selected-result");
+	console.log(targetRsWrap);
+
+	console.log(whichPrize);
 
 
 
-var elePerson = document.getElementById("person-box");
-var btnChooseGame = document.getElementById("btnChooseGame");
-btnChooseGame.addEventListener("click", function() {
-	select.call(this);
 }, false);
 
-
-
-function select(which) {
-	var which = this.getAttribute("data-obj-name"),
-		prizeObj = window.result[which],
-		prizeArr = prizeObj.data,
-		timer = prizeObj.timer,
-		max = employees.length - 1,
-		ran = prizeObj.ran,
-		resultStr = "";
-
-	if (timer) {
-		clearInterval(timer);
-		timer = prizeObj.timer = null;
-
-		prizeArr.push(employees[ran]);
-		console.log(prizeArr);
-
-		resultStr = renderLuckyArray(prizeArr);
-		document.getElementsByClassName("selected-result")[0].innerHTML = resultStr;
-		store.set("result", window.result);
-		this.innerText = "开始";
-		return false;
-	} else {
-		this.innerText = "暂停";
-	}
-
-	timer = prizeObj.timer = setInterval(function() {
-		ran = prizeObj.ran = random(max);
-		var tpl = render(employees[ran]);
-		elePerson.innerHTML = tpl;
-	}, 100);
-}
+console.log(btns);
