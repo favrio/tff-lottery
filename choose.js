@@ -87,23 +87,29 @@ function renderPerson(data, toEle) {
 
 // 事件绑定，选人逻辑
 eleRunBtn.addEventListener("click", function() {
+	var realIndex,
+		realPerson,
+		resultStr;
+
+	// 如果已经开始，则暂停
 	if (timer) {
 		clearInterval(timer);
 		timer = null;
 		eleRunBtn.innerText = "开始";
-		var realIndex = getRandomIndex();
+		realIndex = getRandomIndex();
 		if (realIndex === false) {
 			console.log("全部参与人员都抽取过了。");
 			return false;
 		}
-		var realPerson = employees[realIndex];
+		realPerson = employees[realIndex];
 		renderPerson(realPerson, elePerson);
 		chooseList.push(realPerson);
-		var resultStr = renderLuckyArray(chooseList);
+		resultStr = renderLuckyArray(chooseList);
 		document.getElementsByClassName("selected-result")[0].innerHTML = resultStr;
 		return false;
 	}
 
+	// 暂停状态下，即开始
 	eleRunBtn.innerText = "暂停";
 	timer = setInterval(function() {
 		ran = random(employees.length - 1);
