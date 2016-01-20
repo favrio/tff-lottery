@@ -36,108 +36,31 @@ window.def = {
 
 window.employees = [
 	def, {
-		id: 1,
-		name: "衡荣",
+		name: "Harris 衡荣",
 		img: "1.png"
 	}, {
-		id: 2,
-		name: "衡荣2",
+		name: "Leon 蔡礼杰",
 		img: "2.jpg"
 	}, {
-		id: 1,
-		name: "衡荣3",
+		name: "Alex 成龙",
 		img: "1.png"
 	}, {
-		id: 2,
 		name: "衡荣4",
 		img: "2.jpg"
 	}, {
-		id: 1,
 		name: "衡荣5",
 		img: "1.png"
 	}, {
-		id: 2,
 		name: "衡荣6",
 		img: "2.jpg"
 	}, {
-		id: 1,
 		name: "衡荣7",
 		img: "1.png"
 	}, {
-		id: 2,
 		name: "衡荣8",
 		img: "2.jpg"
 	}, {
-		id: 1,
 		name: "衡荣9",
 		img: "1.png"
-	}, {
-		id: 2,
-		name: "衡荣0",
-		img: "2.jpg"
-	}, {
-		id: 1,
-		name: "衡荣",
-		img: "1.png"
-	}, {
-		id: 2,
-		name: "衡荣2",
-		img: "2.jpg"
-	}, {
-		id: 1,
-		name: "衡荣",
-		img: "1.png"
-	}, {
-		id: 2,
-		name: "衡荣2",
-		img: "2.jpg"
-	}, {
-		id: 1,
-		name: "衡荣",
-		img: "1.png"
-	}, {
-		id: 2,
-		name: "衡荣2",
-		img: "2.jpg"
-	}, {
-		id: 1,
-		name: "衡荣",
-		img: "1.png"
-	}, {
-		id: 2,
-		name: "衡荣2",
-		img: "2.jpg"
-	}, {
-		id: 1,
-		name: "衡荣",
-		img: "1.png"
-	}, {
-		id: 2,
-		name: "衡荣2",
-		img: "2.jpg"
-	}, {
-		id: 1,
-		name: "衡荣",
-		img: "1.png"
-	}, {
-		id: 2,
-		name: "衡荣2",
-		img: "2.jpg"
-	}, {
-		id: 1,
-		name: "衡荣",
-		img: "1.png"
-	}, {
-		id: 2,
-		name: "衡荣2",
-		img: "2.jpg"
-	}, {
-		id: 1,
-		name: "衡荣",
-		img: "1.png"
-	}, {
-		id: 2,
-		name: "衡荣2",
-		img: "2.jpg"
 	}
 ];
